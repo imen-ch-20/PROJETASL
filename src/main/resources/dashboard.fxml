@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+    <!-- Greeting -->
+    <HBox alignment="CENTER" spacing="20">
+        <Text text="Hello, Welcome to ASL App!" />
+    </HBox>
+
+    <!-- Level selection -->
+    <HBox alignment="CENTER" spacing="20">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        <Button text="Basic Level" fx:id="basicLevelButton" onAction="#showBasicLevel"/>
+        <Button text="Intermediate Level" fx:id="intermediateLevelButton" onAction="#showIntermediateLevel"/>
+        <Button text="Advanced Level" fx:id="advancedLevelButton" onAction="#showAdvancedLevel"/>
+    </HBox>
+
+    <!-- Chapter and lessons section -->
+    <VBox spacing="20">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        <Text fx:id="chapterText" text="Chapters for Selected Level:"/>
+
+        <!-- ListView now contains both Chapters & Lessons -->
+        <ListView fx:id="chapterListView" onMouseClicked="#showLessons"/>
+    </VBox>
+</VBox>
