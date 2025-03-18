@@ -1,0 +1,83 @@
+/* General styles for the dashboard */
+.dashboard {
+    -fx-background-color: linear-gradient(to bottom, #E3F2FD, #BBDEFB);
+}
+
+/* Styling for the ListView */
+.chapter-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Styling for each ListCell (chapter item) */
+.chapter-list .list-cell {
+    -fx-background-color: #E3F2FD;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0); /* Fixed */
+}
+
+/* Hover effect for ListCell */
+.chapter-list .list-cell:hover {
+    -fx-background-color: #BBDEFB;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); /* Fixed */
+}
+
+/* Selected item styling */
+.chapter-list .list-cell:selected {
+    -fx-background-color: #42A5F5;
+    -fx-text-fill: white;
+}
+
+/* Styling for buttons */
+/* Styling for buttons */
+.button {
+    -fx-background-color: #42A5F5; /* Light blue for Basic Level */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #1E88E5; /* Slightly darker blue for hover */
+}
+
+/* Specific styles for Intermediate Level button */
+#intermediateLevelButton {
+    -fx-background-color: #1E88E5; /* Medium blue for Intermediate Level */
+}
+
+#intermediateLevelButton:hover {
+    -fx-background-color: #1565C0; /* Darker blue for hover */
+}
+
+/* Specific styles for Advanced Level button */
+#advancedLevelButton {
+    -fx-background-color: #1565C0; /* Dark blue for Advanced Level */
+}
+
+#advancedLevelButton:hover {
+    -fx-background-color: #0D47A1; /* Even darker blue for hover */
+}
+
+/* Styling for the title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+/* Styling for the container */
+.container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0); /* Fixed */
+}

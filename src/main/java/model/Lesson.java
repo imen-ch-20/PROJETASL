@@ -28,4 +28,9 @@ public class Lesson {
     public String getContentImage() {
         return contentImage;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

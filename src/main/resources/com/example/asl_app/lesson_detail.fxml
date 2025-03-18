@@ -1,20 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.LessonDetailController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.LessonDetailController" stylesheets="@stylesLesson.css"
+      styleClass="dashboard" spacing="20" alignment="CENTER">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
 
     <!-- Lesson Title -->
-    <Label fx:id="lessonTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+    <Label fx:id="lessonTitle" styleClass="title" text="Lesson Title"/>
 
-    <!-- Text Area for lesson content -->
-    <TextArea fx:id="lessonContentText" wrapText="true" editable="false" prefHeight="200" prefWidth="580" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="40"/>
+    <!-- Container for text and image -->
+    <VBox fx:id="contentContainer" spacing="20" styleClass="container" alignment="CENTER">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
 
-    <!-- Image View for lesson images -->
-    <ImageView fx:id="lessonContentImage" fitWidth="300" fitHeight="200" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="250"/>
+        <!-- Text Area for Lesson Content -->
+        <TextArea fx:id="lessonContentText" styleClass="text-area" wrapText="true" editable="false" visible="false"
+                  prefWidth="600" prefHeight="400"/> <!-- Set preferred width and height -->
 
-</AnchorPane>
+        <!-- Image View for Lesson Content -->
+        <ImageView fx:id="lessonContentImage" styleClass="image-view" fitWidth="300" fitHeight="200" preserveRatio="true" visible="false"/>
+    </VBox>
+
+    <!-- Buttons for navigation and closing -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="previousButton" text="Previous" onAction="#handlePreviousButton" styleClass="button"/>
+        <Button fx:id="nextButton" text="Next" onAction="#handleNextButton" styleClass="button"/>
+        <Button fx:id="closeButton" text="Close" onAction="#closeWindow" styleClass="button"/>
+    </HBox>
+</VBox>

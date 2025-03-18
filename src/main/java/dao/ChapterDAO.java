@@ -33,28 +33,28 @@ public class ChapterDAO {
     }
 
 
-        public static int getChapterIdByName(Connection conn, String chapterName) {
-            String query = "SELECT id FROM chapters WHERE name = ?";
-            int chapterId = -1; // Default to -1 if not found
+    public static int getChapterIdByName(Connection conn, String chapterName) {
+        String query = "SELECT id FROM chapters WHERE name = ?";
+        int chapterId = -1; // Default to -1 if not found
 
-            if (conn == null) {
-                System.out.println("Connection is null!");
-                return chapterId;
-            }
-
-            try (PreparedStatement stmt = conn.prepareStatement(query)) {
-                stmt.setString(1, chapterName);
-                ResultSet rs = stmt.executeQuery();
-
-                if (rs.next()) {
-                    chapterId = rs.getInt("id");
-                }
-            } catch (Exception e) {
-                System.out.println("Error retrieving chapter ID: " + e.getMessage());
-            }
-
+        if (conn == null) {
+            System.out.println("Connection is null!");
             return chapterId;
         }
+
+        try (PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setString(1, chapterName);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                chapterId = rs.getInt("id");
+            }
+        } catch (Exception e) {
+            System.out.println("Error retrieving chapter ID: " + e.getMessage());
+        }
+
+        return chapterId;
+    }
 
 
 }

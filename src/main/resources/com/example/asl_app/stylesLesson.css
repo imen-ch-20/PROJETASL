@@ -1,0 +1,85 @@
+/* stylesLesson.css */
+
+/* General styles for the dashboard */
+.dashboard {
+    -fx-background-color: linear-gradient(to bottom, #E3F2FD, #BBDEFB);
+}
+
+/* Styling for the title */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2196F3; /* Blue color for the title */
+}
+
+/* Styling for the container */
+.container {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-alignment: center; /* Center alignment for the container */
+}
+
+
+
+/* Styling for the TextArea */
+.text-area {
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-border-color: #BBDEFB; /* Light blue border */
+    -fx-border-radius: 5;
+    -fx-padding: 10;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+    -fx-pref-width: 600; /* Adjust as needed */
+    -fx-pref-height: 400; /* Adjust as needed */
+}
+
+/* Styling for the ImageView */
+.image-view {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+    -fx-fit-width: 600; /* Adjust as needed */
+    -fx-fit-height: 400; /* Adjust as needed */
+}
+
+/* Styling for buttons */
+.button {
+    -fx-background-color: #42A5F5; /* Light blue */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #1E88E5; /* Slightly darker blue on hover */
+}
+
+/* Specific styles for the Previous and Next buttons */
+#previousButton {
+    -fx-background-color: #42A5F5; /* Light blue (Basic Level) */
+}
+
+#previousButton:hover {
+    -fx-background-color: #1E88E5; /* Medium blue on hover */
+}
+
+#nextButton {
+    -fx-background-color: #1E88E5; /* Medium blue (Intermediate Level) */
+}
+
+#nextButton:hover {
+    -fx-background-color: #1565C0; /* Darker blue on hover */
+}
+
+/* Close button styling */
+#closeButton {
+    -fx-background-color: #1565C0; /* Dark blue (Advanced Level) */
+}
+
+#closeButton:hover {
+    -fx-background-color: #0D47A1; /* Even darker blue on hover */
+}
